@@ -1,0 +1,132 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+ .nnnn:hover {
+   font-weight: bold;
+ }
+
+ .fontcolor {
+   color: #4c4c4c;
+ }
+
+ .grad {
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(255, 255, 255, 0) 50%);
+ }
+
+ .boxShadow {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ .img-hover-zoom--colorize img {
+   transition: transform 0.5s ease;
+ }
+ 
+
+ /* The Transformation */
+ .img-hover-zoom--colorize:hover img {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   transform: scale(1.05);
+ }
+
+ .poem {
+   width: 100%;
+   height: 615px;
+    padding-right: 30px;
+ }
+
+ .poem {
+   overflow-y: scroll;
+
+   /* scrollbar-color: red orange;
+   scrollbar-width: thin; */
+ }
+
+ .poem::-webkit-scrollbar {
+   width: 10px;
+ }
+
+ /* Track */
+ .poem::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 5px grey;
+   border-radius: 10px;
+ }
+
+ /* Handle */
+ .poem::-webkit-scrollbar-thumb {
+   background: rgb(210, 207, 207);
+   border-radius: 10px;
+ }
+
+ /* Handle on hover */
+ .poem::-webkit-scrollbar-thumb:hover {
+   background: #b1aeae;
+ }
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+ @media only screen and (max-width: 600px) {
+   .poem {
+     overflow: visible;
+     width: 100%;
+     height: 100%;
+     padding-right: 0px;
+   }
+ }
+ 
+ @media only screen and (max-width: 600px) {
+   .pps {
+     height: auto;
+   }
+  }
+
+  .btnHide{
+    display: none;
+  }
+  @media only screen and (max-width: 600px) {
+   .btnHide {
+     display:block;
+   }
+  }.poem {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow-y: scroll;
+}
+
+.poem::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.iconm{
+  
+    display: block;
+    width: 1.7rem;
+    height: 2px;
+    background-color: #4c4c4c;
+    font-style:italic;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    /* vertical-align: baseline; */
+    text-decoration: none;
+}
+.ffff{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+   .ffff {
+     display: block;
+   }
+
+  }
+  .pcard:hover{
+transform: scale(1.02);
+
+  }
+  .pcard{
+    transition: transform 0.5s ease;
+  }

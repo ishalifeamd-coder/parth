@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accounts Office Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="myStyle.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .overlay {
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 0%;
+      overflow-x: hidden;
+      transition: 0.5s;
+      z-index: 999;
+    }
+
+    .overlay.open {
+      width: 30%;
+      /* Default for desktop */
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+      .overlay.open {
+        width: 70%;
+        /* Or any value like 50% */
+      }
+    }
+  </style>
+  
+</head>
+
+<body class="bg-white text-gray-800">
+ <!-- Navbar -->
+  <nav class="bg-white fixed top-0 w-full shadow z-50 px-6 py-4 flex justify-between items-center fontcolor">
+    <a class="text-lg font-regular" href="/index.html"
+      style="font-size: 24px; letter-spacing: 0.2em;">AMMAR SHUMS</a>
+    <button onclick="openNav()" class="w-8 "><img src="/images/images/menu.png" alt=""></button>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="myNav" class="fixed top-0 right-0 h-full w-0 bg-white overflow-hidden transition-all duration-500 z-50 fontcolor">
+    <button onclick="closeNav()" class="absolute top-4 right-4 text-4xl">&times;</button>
+    <div class="flex flex-col justify-center items-center h-full space-y-6">
+      <a href="/index.html" class="text-3xl nnnn">Home</a>
+      <a href="projects.html" class="text-3xl nnnn">Projects</a>
+      <a href="studios.html" class="text-3xl nnnn">Studio</a>
+      <a href="contact.html" class="text-3xl nnnn">Contact</a>
+    </div>
+  </div>
+
+  <div class="bg-white pt-20 pb-4 px-6 text-3xl font-semibold fontcolor mt-5">Accounts Office</div>
+
+  <!-- Full Width Image -->
+  <img src="images/Projects/Institution/Accounts Office/Accounts Office-2.JPG" alt="Accounts Office"
+    class="w-full h-[900px] object-cover mt-4" />
+
+  <!-- Main Content -->
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <p class="mb-8 text-lg leading-relaxed">
+      Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact spaces
+      allows a graceful blend between light and texture.
+    </p>
+
+    <!-- Gallery Carousel -->
+    <div class="relative my-12">
+      <div class="overflow-hidden">
+        <div id="galleryCarouselTrack" class="flex transition-transform duration-500 ">
+          <img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg"
+            class="w-full h-auto rounded-3xl md:w-1/2 p-2" alt="Alanna View">
+          <img src="https://images.pexels.com/photos/256655/pexels-photo-256655.jpeg"
+            class="w-full rounded-3xl  md:w-1/2 p-2" alt="Details">
+          <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+          <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+          <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+          <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+        </div>
+      </div>
+      <button id="galleryPrevBtn"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white px-4 py-2 shadow">&#10094;</button>
+      <button id="galleryNextBtn"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white px-4 py-2 shadow">&#10095;</button>
+    </div>
+
+    <p class="mb-12 text-lg leading-relaxed">
+      Alanna is a conceptual design... Natural light in this compact spaces allows a graceful blend between light and
+      texture.
+    </p>
+
+    
+
+    <!-- JavaScript -->
+    <script>
+     const scrollContainer = document.getElementById("scrollContainer");
+    document.getElementById("prevBtn").onclick = () => {
+      scrollContainer.scrollBy({ left: -320, behavior: "smooth" });
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      scrollContainer.scrollBy({ left: 320, behavior: "smooth" });
+    };
+    </script>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="  border border-t-gray-300 fontcolor py-6 md:bottom-0 w-full z-10" style="background-color: rgba(224, 225, 222, 0.463);">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+      <h1 class="block md:hidden text-gray-700 text-3xl">AMMAR SHUMS</h1>
+      <!-- Navigation Links -->
+      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center md:justify-start gap-4 text-xl">
+        <a href="index.html" class="">Home</a>
+        <a href="projects.html" class="">Projects</a>
+        <a href="studios.html" class="">Studio</a>
+        <a href="contact.html" class="">Contact</a>
+      </div>
+      <hr class="w-full border-gray-300 my-4 md:hidden">
+      <!-- Social Links -->
+      <div class="flex  md:flex-row flex-wrap justify-center md:justify-end gap-4 text-xl">
+        <a href="#" class="">Instagram</a>
+        <a href="#" class="">LinkedIn</a>
+        <a href="#" class="">YouTube</a>
+      </div>
+    </div>
+    <div class="text-sm text-gray-500
+     mt-4 max-w-7xl mx-auto flex md:justify-start justify-center ">
+      © 2025 AMMAR SHUMS</div>
+  </footer>
+
+  <script>
+    let galleryIndex = 0;
+    const galleryTrack = document.getElementById("galleryCarouselTrack");
+    const galleryItems = galleryTrack.querySelectorAll("img");
+    const totalGalleryItems = galleryItems.length;
+
+    document.getElementById("galleryNextBtn").addEventListener("click", () => {
+      galleryIndex = (galleryIndex + 1) % totalGalleryItems;
+      updateGalleryCarousel();
+    });
+
+    document.getElementById("galleryPrevBtn").addEventListener("click", () => {
+      galleryIndex = (galleryIndex - 1 + totalGalleryItems) % totalGalleryItems;
+      updateGalleryCarousel();
+    });
+
+    function updateGalleryCarousel() {
+      const slideWidth = galleryItems[0].offsetWidth;
+      galleryTrack.style.transform = `translateX(-${galleryIndex * slideWidth}px)`;
+    }
+
+    setInterval(() => {
+      galleryIndex = (galleryIndex + 1) % totalGalleryItems;
+      updateGalleryCarousel();
+    }, 5000);
+
+    function openNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.remove("w-0");
+      nav.classList.add("w-[30%]", "max-sm:w-[70%]");
+    }
+
+    function closeNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.add("w-0");
+      nav.classList.remove("w-[30%]", "max-sm:w-[70%]");
+    }
+  </script>
+
+
+</body>
+
+</html>

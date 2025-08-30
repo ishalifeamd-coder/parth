@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alanna Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="myStyle.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .overlay {
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 0%;
+      overflow-x: hidden;
+      transition: 0.5s;
+      z-index: 999;
+    }
+
+    .overlay.open {
+      width: 30%;
+      /* Default for desktop */
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+      .overlay.open {
+        width: 70%;
+        /* Or any value like 50% */
+      }
+    }
+  </style>
+
+</head>
+
+<body class="bg-white fontcolor">
+
+  <!-- Navbar -->
+  <nav id="navbar1"
+    class="bg-white fixed top-0 w-full shadow z-50 px-6 py-4 flex justify-between items-center fontcolor transition-all duration-500 z-50">
+    <a class="text-lg font-regular" href="index.html" style="font-size: 24px; letter-spacing: 0.2em">AMMAR SHUMS</a>
+    <button onclick="openNav()" class="w-8">
+      <li class="iconm"></li>
+      <li class="iconm mt-2"></li>
+      <li class="iconm mt-2"></li>
+    </button>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="myNav"
+    class="fixed top-0 right-0 h-full w-0 bg-white overflow-hidden transition-all duration-500 z-50 fontcolor"
+    style="background-color: #f1efef">
+    <button onclick="closeNav()" class="absolute top-4 right-4 text-4xl">
+      &times;
+    </button>
+
+    <div class="flex flex-col justify-between h-full px-6 py-10 sm:ml-10 sm:mt-2">
+      <!-- Top Menu Links -->
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-3xl font-medium nnnn">Home</a>
+        <a href="projects.html" class="text-3xl font-medium nnnn">Projects</a>
+        <a href="studios.html" class="text-3xl font-medium nnnn">
+          Studio/<br />About
+        </a>
+        <a href="contact.html" class="text-3xl font-medium nnnn">Contact</a>
+      </div>
+
+      <!-- Bottom Logo + Social Icons -->
+      <div class="flex items-end justify-between mt-10">
+        <!-- Logo -->
+        <div>
+          <img src="images/logo/AR Designs Logo 1.jpg" alt="AR Designs Logo"
+            class="h-[100px] w-[100px] object-contain" />
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-3 pr-4">
+          <a href="https://instagram.com" target="_blank">
+            <i class="fa fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <i class="fa fa-linkedin-square text-2xl"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <i class="fa fa-youtube-square text-2xl"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity bg-fixed"
+      style="background-image: url('images/HomePage/SliderImages/slide-3.jpg');"></div>
+  </div>
+
+  <!-- Project Name -->
+  <div class="absolute md:bottom-20 bottom-16 md:left-[105px] left-4 transform md:-translate-x-1/2 text-white z-10">
+    <h4 class="text-3xl md:text-5xl font-regular">
+      Allana
+    </h4>
+
+  </div>
+  <div class="absolute md:bottom-9 bottom-10 md:left-[165px] left-4  md:-translate-x-1/2 text-white z-10">
+    <span class="text-xl md:text-3xl font-regular">Ahmedabad, India</span>
+  </div>
+
+
+  <!-- first write up -->
+  <div class="w-[95%] mx-auto md:mt-16 mt-4">
+    <p class="mb-4 md:text-2xl text-lg px-2 leading-relaxed font-regular">
+      Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact spaces
+      allows a graceful blend between light and texture.
+      Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact spaces
+      .
+    </p>
+  </div>
+
+  <!-- 1 Full Image -->
+  <div class="relative md:h-[700px] h-[500px] overflow-hidden mx-8 mt-16">
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity  h-full"
+      style="background-image: url('images/HomePage/SliderImages/slide-1.jpg');"></div>
+  </div>
+
+  <!-- Write up Box 2 -->
+
+  <!-- Write up and image Box -->
+  <div class="grid md:grid-cols-2 mx-8 md:mt-16 mt-10 mb-10 ">
+
+    <h4 class="text-2xl md:text-4xl font-semibold ">
+      Balancing Public & Private
+    </h4>
+
+
+    <!-- Right image box -->
+    <div>
+      <p class=" text-xl leading-relaxed mt-4">
+        Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact
+        spaces
+        allows a graceful blend between light and texture.allows a graceful blend between light and texture.allows a
+        graceful blend between light and texture.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 2 Full Image -->
+  <div class="relative md:h-[700px] h-[500px] overflow-hidden mx-8 md:mt-16">
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity  h-full"
+      style="background-image: url('images/HomePage/SliderImages/slide-3.jpg');"></div>
+  </div>
+
+  <!-- Write up and image Box -->
+  <div class="grid md:grid-cols-2 gap-8 mx-8 md:mt-8  ">
+    <div class="md:p-8 pt-10">
+      <h4 class="text-2xl md:text-4xl font-semibold md:mt-32">
+        Balancing Public & Private
+      </h4>
+      <p class=" text-xl leading-relaxed md:pr-12">
+        Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact
+        spaces
+        allows a graceful blend between light and texture.allows a graceful blend between light and texture.allows a
+        graceful blend between light and texture.
+      </p>
+    </div>
+
+    <div>
+      <img class="w-full" src="images/images/3-copy (1).jpg" />
+    </div>
+  </div>
+
+  <!-- Two Image Box -->
+  <div class="grid md:grid-cols-2 gap-8 mx-8 mt-8">
+    <!-- Image one -->
+    <div>
+      <img class="w-full" src="images/images/18-copy.jpg" />
+    </div>
+    <!-- Image Two -->
+    <div>
+      <img class="w-full" src="images/images/21-copy (1).jpg" />
+    </div>
+  </div>
+
+  <!-- Write up and image Box -->
+  <div class="grid md:grid-cols-2 gap-8 mx-8 mt-8 ">
+
+    <!-- Right image box -->
+    <div>
+      <img class="w-full" src="images/images/39.jpg" />
+    </div>
+
+    <div class=" md:px-16 ">
+      <h4 class="text-2xl md:text-4xl font-semibold md:mt-32">
+        Access to Natural Light & Shade
+      </h4>
+      <p class=" text-xl leading-relaxed  mt-4 ">
+        Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact
+        spaces
+        allows a graceful blend between light and texture.allows a graceful blend between light and texture.allows a
+        graceful blend between light and texture.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- 3 Full Image -->
+  <div class="relative md:h-[700px] h-[500px] overflow-hidden mx-8 mt-16">
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity  h-full"
+      style="background-image: url('images/HomePage/SliderImages/slide-4.jpg');"></div>
+  </div>
+
+  <!-- Write up Box 2 -->
+  <div class="grid md:grid-cols-2 mx-8 mt-16">
+    <!-- first Box -->
+    <div class="text-2xl md:text-4xl font-semibold">Immersed in the Landscape</div>
+    <!-- Second Box -->
+    <div>
+      <p class=" text-2xl leading-relaxed  mt-4">
+        Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact
+        spaces
+        allows a graceful blend between light and texture.allows a graceful blend between light and texture.allows a
+        graceful blend between light and texture.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4 Full Image -->
+  <div class="relative md:h-[700px] h-[500px] overflow-hidden mx-8 mt-16">
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity  h-full"
+      style="background-image: url('images/HomePage/SliderImages/slide-5.jpg');"></div>
+  </div>
+
+  <!-- Last write up -->
+  <div class="md:w-[50%] md:mx-auto mx-10 mt-20 md:taxt-center">
+    <p class="mb-4 text-2xl leading-relaxed md:text-center">
+      Alanna is a conceptual design which caters to the client’s personal needs... Natural light in this compact spaces
+      allows a graceful blend between light and texture.
+    </p>
+  </div>
+
+  <!-- Explore div -->
+  <div class="max-w-7xl mx-auto py-6" style="display: none;">
+    <div class="bg-white pl-4 pt-10 text-4xl font-semibold fontcolor mt-5">Explore More</div>
+    <div class="relative my-6">
+      <div class="overflow-hidden mx-2">
+        <div id="galleryCarouselTrack" class="flex transition-transform duration-500">
+
+          <img src="images/HomePage/Projects/Home Space/homespaceproject.jpg" class="w-full  rounded-3xl md:w-1/2 p-2"
+            alt="Alanna View">
+
+          <img src="images/HomePage/Projects/Cultural - Museum/culturalandmuseumprojectcover.jpg"
+            class="w-full rounded-3xl  md:w-1/2 p-2" alt="Details">
+
+          <img src="images/HomePage/Projects/Institution/institutionprojectcover.jpg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+
+          <img src="images/HomePage/Projects/Work Space/workspaceproject.jpg" class="w-full rounded-3xl md:w-1/2 p-2"
+            alt="Details">
+
+          <img src="images/HomePage/Projects/Home Space/homespaceproject.jpg" class="w-full rounded-3xl md:w-1/2 p-2"
+            alt="Details">
+
+          <img src="images/HomePage/Projects/Cultural - Museum/culturalandmuseumprojectcover.jpg"
+            class="w-full rounded-3xl  md:w-1/2 p-2" alt="Details">
+
+          <img src="images/HomePage/Projects/Institution/institutionprojectcover.jpg"
+            class="w-full rounded-3xl md:w-1/2 p-2" alt="Details">
+
+          <img src="images/HomePage/Projects/Work Space/workspaceproject.jpg" class="w-full rounded-3xl md:w-1/2 p-2"
+            alt="Details">
+
+
+        </div>
+      </div>
+      <button id="galleryPrevBtn"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white px-4 py-2 shadow">&#10094;</button>
+      <button id="galleryNextBtn"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white px-4 py-2 shadow">&#10095;</button>
+    </div>
+
+
+
+
+
+
+    <script>
+      const scrollContainer = document.getElementById("scrollContainer");
+      document.getElementById("prevBtn").onclick = () => {
+        scrollContainer.scrollBy({ left: -320, behavior: "smooth" });
+      };
+      document.getElementById("nextBtn").onclick = () => {
+        scrollContainer.scrollBy({ left: 320, behavior: "smooth" });
+      };
+    </script>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="  border  fontcolor py-6 md:bottom-0 w-full z-10" style="background-color:#f5f5f7">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+      <h1 class="block md:hidden text-gray-700 text-3xl">AMMAR SHUMS</h1>
+      <!-- Navigation Links -->
+      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center md:justify-start gap-4 text-xl">
+        <a href="/index.html" class="">Home</a>
+        <a href="/projects.html" class="">Projects</a>
+        <a href="/studios.html" class="">Studio</a>
+        <a href="/contact.html" class="">Contact</a>
+      </div>
+      <hr class="w-full border-gray-300 my-4 md:hidden">
+      <!-- Social Links -->
+      <div class="flex  md:flex-row flex-wrap justify-center md:justify-end gap-4 text-xl">
+        <a href="#" class="">Instagram</a>
+        <a href="#" class="">LinkedIn</a>
+        <a href="#" class="">YouTube</a>
+      </div>
+    </div>
+    <div class="text-sm text-gray-500
+     mt-4 max-w-7xl mx-auto flex md:justify-start justify-center ">
+      © 2025 AMMAR SHUMS</div>
+  </footer>
+
+  <script>
+    let galleryIndex = 0;
+    const galleryTrack = document.getElementById("galleryCarouselTrack");
+    const galleryItems = galleryTrack.querySelectorAll("img");
+    const totalGalleryItems = galleryItems.length;
+
+    document.getElementById("galleryNextBtn").addEventListener("click", () => {
+      galleryIndex = (galleryIndex + 1) % totalGalleryItems;
+      updateGalleryCarousel();
+    });
+
+    document.getElementById("galleryPrevBtn").addEventListener("click", () => {
+      galleryIndex = (galleryIndex - 1 + totalGalleryItems) % totalGalleryItems;
+      updateGalleryCarousel();
+    });
+
+    function updateGalleryCarousel() {
+      const slideWidth = galleryItems[0].offsetWidth;
+      galleryTrack.style.transform = `translateX(-${galleryIndex * slideWidth}px)`;
+    }
+
+    setInterval(() => {
+      galleryIndex = (galleryIndex + 1) % totalGalleryItems;
+      updateGalleryCarousel();
+    }, 5000);
+
+    function openNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.remove("w-0");
+      nav.classList.add("w-[40%]", "max-sm:w-[100%]");
+    }
+
+    function closeNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.add("w-0");
+      nav.classList.remove("w-[40%]", "max-sm:w-[100%]");
+    }
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar1").style.top = "0";
+      } else {
+        document.getElementById("navbar1").style.top = "-70px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+
+</body>
+
+</html>

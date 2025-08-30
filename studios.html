@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio / About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="myStyle.css"/>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .footer {
+      background: #000;
+      color: #fff;
+      padding: 30px 20px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .footer .small {
+      color: #777;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .overlay {
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 0%;
+      overflow-x: hidden;
+      transition: 0.5s;
+      z-index: 999;
+    }
+
+    .overlay.open {
+      width: 30%;
+      /* Default for desktop */
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+      .overlay.open {
+        width: 70%;
+        /* Or any value like 50% */
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Only the changes inside the body are shown, rest of the head and tailwind import remains same -->
+
+
+     <!-- Navbar -->
+  <nav class="bg-white fixed top-0 w-full shadow z-50 px-6 py-4 flex justify-between items-center fontcolor">
+    <a class="text-lg font-regular" href="index.html" style="font-size: 24px; letter-spacing: 0.2em">AMMAR SHUMS</a>
+    <button onclick="openNav()" class="w-8">
+      <li class="iconm"></li>
+      <li class="iconm mt-2"></li>
+      <li class="iconm mt-2"></li>
+    </button>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="myNav"
+    class="fixed top-0 right-0 h-full w-0 bg-white overflow-hidden transition-all duration-500 z-50 fontcolor"
+    style="background-color: #f1efef">
+    <button onclick="closeNav()" class="absolute top-4 right-4 text-4xl">
+      &times;
+    </button>
+
+    <div class="flex flex-col justify-between h-full px-6 py-10 sm:ml-10 sm:mt-2">
+      <!-- Top Menu Links -->
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-3xl font-medium nnnn">Home</a>
+        <a href="projects.html" class="text-3xl font-medium nnnn">Projects</a>
+        <a href="studios.html" class="text-3xl font-medium nnnn">
+          Studio/<br />About
+        </a>
+        <a href="contact.html" class="text-3xl font-medium nnnn">Contact</a>
+      </div>
+
+      <!-- Bottom Logo + Social Icons -->
+      <div class="flex items-end justify-between mt-10">
+        <!-- Logo -->
+        <div>
+          <img src="images/logo/AR Designs Logo 1.jpg" alt="AR Designs Logo"
+            class="h-[100px] w-[100px] object-contain" />
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-3 pr-4">
+          <a href="https://instagram.com" target="_blank">
+            <i class="fa fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <i class="fa fa-linkedin-square text-2xl"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <i class="fa fa-youtube-square text-2xl"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Studio/About Section -->
+  <div class="grid md:grid-cols-2 gap-6 px-6 pt-28 md:px-20">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-semibold">Studio / About</h2>
+      <p class="mt-6 text-xl leading-relaxed pr-0 md:pr-20 ">
+        AR Designs is a multidisciplinary architecture, interior design,
+        landscaping, urban planning firm founded in 2015.
+      </p>
+      <p class="mt-4 text-xl leading-relaxed pr-0 md:pr-20">
+        Mr. Ammar Shums is the Principal architect and founder of this firm.
+        A young and dynamically creative artist, the team design approach is
+        to reconnect architecture with nature, make efficient use of space,
+        natural materials, magical play of lights and back to earth
+        landscape to reinvent and transform living environment and urban
+        spaces.
+      </p>
+      <p class="text-xl leading-relaxed md:mr-0 mt-4 font-regular pr-0 md:pr-20">
+        We have a knack of approaching each project regardless of size and
+        space with an understanding that architecture has a unique power to
+        influence lifestyle, work environment, moods and productivity of
+        people working and residing in these spaces.
+      </p>
+    </div>
+    <div>
+      <img src="images/Studio - About/studio-1.jpg" alt="" class="w-full h-auto max-h-[700px] object-cover" />
+    </div>
+  </div>
+
+  <!-- Second Section -->
+  <div class="grid md:grid-cols-3 gap-14 mt-16 px-6 md:px-20">
+    <div class="md:row-span-3 md:mt-16 mt-0">
+      <img src="images/Studio - About/studio-3.jpg" alt="" class="w-full  object-cover" />
+    </div>
+    <div class="md:col-span-2 md:pl-20">
+      <p class="text-xl leading-relaxed">
+        Our forte is giving attention to details and customization Honesty
+        to design, client satisfaction and sustainability are the driving
+        forces along with ability to constantly explore and evolve.
+      </p>
+      <p class="text-xl leading-relaxed mt-4">
+        Attaining a balance between functionality and aesthetics, context,
+        climate, material cost and time frame has always been our constant
+        endeavor and prime motive which has in turn has guaranteed customer
+        satisfaction.
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img src="images/Studio - About/studio-2.jpg" alt="" class="w-full h-[500px] object-cover mt-4 md:mt-0" />
+    </div>
+  </div>
+
+  <!-- Large Image -->
+  <div class="mt-16">
+    <img src="images/Studio - About/DSC02047.jpg" class="w-full object-cover max-h-[800px]" alt="Studio Image" />
+  </div>
+
+  <!-- Profile Section -->
+  <div class="md:flex px-6 md:px-20 mt-16 items-start gap-8">
+    <div class="flex-shrink-0 text-center">
+      <img src="/images/Studio - About/Ammar Shums Profile 1.png" class="h-52 w-52 mx-auto object-cover" />
+      <h4 class="text-xl font-semibold mt-4">AMMAR SHUMS</h4>
+    </div>
+    <div class="text-lg leading-relaxed mt-6 md:mt-0">
+      <p class="text-lg leading-relaxed mx-0 md:mx-20">
+        Ammar Shums is design principal at AR Designs since 2015. He
+        maneuvers the studio with a belief in a technically appropriate and
+        ecological sensitive approach that weaves together threads of
+        traditional wisdom into design. His intention is to manifest
+        creative expression stemming from the journey of self – discovery
+        and an ever evolving understanding of life.
+      </p>
+      <p class="text-lg leading-relaxed mt-5 mx-0 md:mx-20">
+        He heads the team, guiding the team in a range of institutional,
+        residential, cultural projects, interior and furniture design. An
+        approach he believes can make design expressive and meaningful. His
+        academic qualification includes Bachelor’s in commerce and further a
+        Bachelors in architecture from Vadodara . He also has done
+        specialized architecture courses from Auroville Pondicherry.
+      </p>
+    </div>
+  </div>
+
+  <hr class="my-12 border-gray-300 mx-6 md:mx-20" />
+
+  <!-- Awards Section -->
+  <div class="grid md:grid-cols-2 gap-6 px-6 md:px-20">
+    <img src="images/Studio - About/Sample 01.jpg" class="w-[500px] object-cover" />
+
+    <div class="mt-6">
+      <img src="images/Studio - About/Sample 02.jpg" class="w-[500px] object-cover" />
+      <a href="https://www.architectandinteriorsindia.com/lists/1991-igen-2019-ammar-shums" target="_blank"
+        class="inline-block bg-gray-700 hover:bg-gray-800 text-white py-2 px-6 rounded-3xl ml-20 md:ml-40">
+        Read more...
+      </a>
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <hr class="my-12 border-gray-300 mx-6 md:mx-20" />
+
+  <!-- Partner Section -->
+  <div class="flex flex-wrap justify-center gap-6 px-6 md:px-20 mb-16">
+    <img src="images/Studio - About/jaquargrouplogo.jpg" class="w-[200px] h-[50px] object-contain " />
+    <img src="images/Studio - About/Jaguar 01.jpg" class="w-[320px] object-cover" />
+    <img src="images/Studio - About/Jaguar 02.jpg" class="w-[640px] object-cover" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="border border-t-gray-300 fontcolor py-3 w-full z-10"
+    style="background-color: rgba(224, 225, 222, 0.463)">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+      <h1 class="block md:hidden text-gray-700 text-3xl">AMMAR SHUMS</h1>
+      <!-- Navigation Links -->
+      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center md:justify-start gap-4 text-xl">
+        <a href="index.html" class="">Home</a>
+        <a href="projects.html" class="">Projects</a>
+        <a href="studios.html" class="">Studio</a>
+        <a href="contact.html" class="">Contact</a>
+      </div>
+      <hr class="w-full border-gray-300 my-4 md:hidden" />
+      <!-- Social Links -->
+      <div class="flex md:flex-row flex-wrap justify-center md:justify-end gap-4 text-xl">
+        <a href="#" class="">Instagram</a>
+        <a href="#" class="">LinkedIn</a>
+        <a href="#" class="">YouTube</a>
+      </div>
+    </div>
+    <div class="text-sm text-gray-500 mt-4 max-w-7xl mx-auto flex md:justify-start justify-center">
+      © 2025 AMMAR SHUMS
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Navbar toggle
+    function openNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.remove("w-0");
+      nav.classList.add("w-[40%]", "max-sm:w-[100%]");
+    }
+
+    function closeNav() {
+      const nav = document.getElementById("myNav");
+      nav.classList.add("w-0");
+      nav.classList.remove("w-[40%]", "max-sm:w-[100%]");
+    }
+  </script>
+
+</body>
+
+</html>

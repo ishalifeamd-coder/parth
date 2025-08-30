@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+body {
+    overflow-x: hidden;
+
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.overlay-content a {
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover {
+    color: #555;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+}
+
+/* Hero Section  */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Card Carousel container */
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item-custom {
+    flex: 0 0 27%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0));
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Studio Section  */
+
+/* .studio-section {
+     position: relative;
+     height: 80vh;
+     background: url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg") no-repeat center center/cover;
+ } */
+
+.studio-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact US Section */
+/* 
+.contact-card {
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    min-height: 500px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.contact-image {
+    flex: 1;
+    background: url("https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg") no-repeat center center/cover;
+}
+
+.contact-content {
+    flex: 1;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.btn-connect {
+    background-color: #444;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border: none;
+} */
+ 
+
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+    margin-right: 20px;
+}
+
+.footer .nav-links a {
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg") no-repeat center center/cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.project-desc {
+    font-size: 18px;
+    margin: 60px 0;
+    line-height: 1.8;
+}
+
+/* Insert your full global CSS here */
+
+.carousel-container1 {
+    overflow: hidden;
+}
+
+.carousel-track1 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item-custom1 {
+    flex: 0 0 70%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.card1 {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card1 img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablets (portrait & landscape) */
+@media (max-width: 992px) {
+
+    .hero-text {
+        font-size: 2.5rem;
+    }
+
+    .carousel-item-custom {
+        flex: 0 0 40%;
+    }
+
+    .carousel-item-custom1 {
+        flex: 0 0 90%;
+    }
+
+    .project-desc {
+        font-size: 16px;
+        margin: 40px 0;
+    }
+
+    .form-box {
+        padding: 3rem;
+        min-height: 600px;
+    }
+
+}
+
+@media (max-width:766px) {
+     .container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+     .nav-links {
+          margin-bottom: 20px;
+        }
+
+        .nav-links a {
+          display: block;
+          margin: 10px 0;
+          font-size: 20px;
+        }
+
+        .social-links a {
+          display: inline-block;
+          margin: 10px 10px;
+          font-size: 18px;
+        }
+
+        .small {
+          margin-top: 20px;
+        }
+      
+}
